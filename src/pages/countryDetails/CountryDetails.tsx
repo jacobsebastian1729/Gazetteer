@@ -103,6 +103,6 @@ export default function CountryDetails() {
       </Box>
     );
   } else {
-    return <div></div>;
+    return <div style={{background: 'radial-gradient( #00b0ff, white)', height: "100vh"}}></div>;
   }
 }

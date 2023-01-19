@@ -8,6 +8,7 @@ import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import Card from "@mui/material/Card";
 import Box from "@mui/material/Box";
 import TableFooter from "@mui/material/TableFooter";
 import IconButton from "@mui/material/IconButton";
@@ -18,7 +19,7 @@ import MuiAlert, { AlertProps } from "@mui/material/Alert";
 import NorthIcon from "@mui/icons-material/North";
 import SouthIcon from "@mui/icons-material/South";
 import Avatar from "@mui/material/Avatar";
-
+import Toolbar from "@mui/material/Toolbar";
 
 import { useSelector, useDispatch } from "react-redux/es/exports";
 import { countriesActions } from "../../redux/slice/countrySlice";
@@ -151,11 +152,11 @@ export default function Home() {
     return <Loading/>
   }
   return (
-    <div>
+    <div style={{background: 'radial-gradient( #00b0ff, white)'}}>
       <SearchTab />
 
-      <Box sx={{ display: "flex", justifyContent: "center", marginBottom: 5 }}>
-        <TableContainer sx={{ width: 0.9 }} component={Paper}>
+      <Box sx={{ display: "flex", justifyContent: "center", marginBottom: 5, }}>
+        <TableContainer sx={{ width: 0.9, opacity: 0.9 }} component={Paper} elevation={0}>
           <Table sx={{ minWidth: 700 }} aria-label="customized table">
             <TableHead>
               <TableRow >
@@ -279,8 +280,9 @@ export default function Home() {
               </TableRow>
             </TableFooter>
           </Table>
+          
         </TableContainer>
-
+        
         <Snackbar
           open={addOpen}
           autoHideDuration={1500}
@@ -311,6 +313,7 @@ export default function Home() {
           </Alert>
         </Snackbar>
       </Box>
+      <Box sx={{ height: '50px' }}></Box>
     </div>
   );
 }

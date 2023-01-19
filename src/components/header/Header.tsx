@@ -65,13 +65,13 @@ export default function Hearer(props: Props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", alignContent: "center" }}>
       <CssBaseline />
-      <AppBar component="nav">
-        <Toolbar>
+      <AppBar component="nav" sx={{ backgroundColor: "#00b0ff"}}>
+        <Toolbar sx={{overflow: 'auto'}}>
           <Link to="/" className="link">
             <IconButton
-              sx={{ color: "white" }}
+              sx={{ color: "white", height: 0.5 }}
               aria-label="open drawer"
               edge="start"
             >
@@ -115,27 +115,8 @@ export default function Hearer(props: Props) {
           </Box>
         </Toolbar>
       </AppBar>
-      <Box component="nav">
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true,
-          }}
-          sx={{
-            display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-            },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </Box>
-      <Box component="main" sx={{ p: 2 }}>
+      
+      <Box component="main" sx={{ p: 0 }}>
         <Toolbar />
       </Box>
     </Box>

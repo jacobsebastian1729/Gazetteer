@@ -93,7 +93,8 @@ export default function Home() {
   }
 
   return (
-    <Box sx={{ display: "flex", justifyContent: "center", marginBottom: 10 }}>
+    <div style={{background: 'radial-gradient( #00b0ff, white)', height: "100vh"}}>
+    <Box sx={{ display: "flex", justifyContent: "center", p: 3 }}>
       <TableContainer sx={{ width: 0.9 }} component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
           <TableHead>
@@ -153,6 +154,9 @@ export default function Home() {
           A Country just removed from the favorite page
         </Alert>
       </Snackbar>
+      
     </Box>
+    <Box sx={{ height: '50px' }}></Box>
+    </div>
   );
 }

@@ -16,7 +16,7 @@ export default function SearchTab() {
   }
 
   return (
-    <Box sx={{ "& > :not(style)": { m: 1 } }}>
+    <Box sx={{ "& > :not(style)": { p: 3 } }}>
       <Box
         sx={{
           display: "flex",
